@@ -18,6 +18,8 @@ type TranslationKey =
   | "1-2-desc"
   | "1-3-1"
   | "1-3-1-desc"
+  | "1-3-2"
+  | "1-3-2-desc"
   | "2"
   | "2-1"
   | "2-1-desc"
@@ -65,6 +67,8 @@ const translations: TranslationsType = {
       "1-2-desc": "Step-by-step guide to create family preparedness plan",
       "1-3-1": "Santa Clara County Rapid Response Hotline:",
       "1-3-1-desc": "Tel: 408-290-1144",
+      "1-3-2": "San Mateo County Rapid Response Hotline:",
+      "1-3-2-desc": "Tel: 203-666-4472",
       "2": "Legal Aid",
       "2-1": "Immigration Institute of the Bay Area",
       "2-1-desc": "Free immigration consultations and legal services",
@@ -90,9 +94,9 @@ const translations: TranslationsType = {
     },
   },
   es: {
-    name: "RECURSOS DE PROTECCION AL INMIGRANTE",
-    name2: "CONOZCA LOS DERECHOS DE SUS PACIENTES: RECURSOS PARA PROVEEDORES",
-    bio: "Recursos para Inmigrantes y proveedores que trabajan con ellos",
+    name: "Recursos para Inmigrantes y proveedores que trabajan con ellos",
+    name2: "",
+    bio: "",
     languageButton: "English",
     sections: {
       "1": "Recursos de Protección al Inmigrante",
@@ -102,6 +106,8 @@ const translations: TranslationsType = {
       "1-2-desc": "Guía paso a paso para crear un plan de preparación familiar",
       "1-3-1": "Línea Directa de Respuesta Rápida del Condado de Santa Clara:",
       "1-3-1-desc": "Tel: 408-290-1144",
+      "1-3-2": "Línea Directa de Respuesta Rápida del Condado de San Mateo:",
+      "1-3-2-desc": "Tel: 203-666-4472",
       "2": "Ayuda Legal",
       "2-1": "Instituto de Inmigración del Área de la Bahía",
       "2-1-desc": "Consultas gratuitas de inmigración y servicios legales",
@@ -115,17 +121,16 @@ const translations: TranslationsType = {
       "3-1-desc": "Servicios gratuitos de distribución de alimentos",
       "3-2": "Distribución de Alimentos de Caridades Católicas",
       "3-2-desc": "Servicios gratuitos de distribución de alimentos",
-      "3-3": "Kids in Need of Defense - Apoyo para Niños",
+      "3-3": "Niños en Necesidad De Defensa - Apoyo Para Niños ",
       "3-3-desc":
         "Servicios de salud mental, apoyo social y recursos para el proceso legal de inmigración para niños",
-      "3-4": "Covered California - Medi-Cal",
-      "3-4-desc":
-        "Información sobre cobertura de seguro médico para inmigrantes",
+      "3-4": "Programa de Covered California - Medi-Cal",
+      "3-4-desc": "Información sobre seguro de salud para inmigrantes",
       "3-5": "Centro de Recursos Comunitarios La Raza",
       "3-5-desc": "Servicios y programas comunitarios integrales",
       "3-6": "Servicios Comunitarios del Área de la Bahía",
       "3-6-desc":
-        "Servicios de vivienda y salud mental orientados a la recuperación",
+        "Servicios de ayuda para personas sin hogar y para rehabilitación y recuperación",
     },
   },
 };
@@ -230,6 +235,7 @@ const profile: Profile = {
           title: "Kids in Need of Defense - Support for Children",
           type: "url",
           url: "https://supportkind.org/what-we-do/social-services/",
+          urlEs: "https://supportkind.org/es/what-we-do/social-services/",
           description:
             "Mental health services, social support, and resources for the legal immigration process for children",
         },
@@ -238,6 +244,8 @@ const profile: Profile = {
           title: "Covered California - Medi-Cal",
           type: "url",
           url: "https://www.coveredca.com/learning-center/information-for-immigrants/",
+          urlEs:
+            "https://www.coveredca.com/espanol/learning-center/information-for-immigrants/",
           description:
             "Information regarding health insurance coverage for immigrants",
         },
