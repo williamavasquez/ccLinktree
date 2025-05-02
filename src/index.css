@@ -25,8 +25,8 @@
 
 @layer components {
   .torn-paper-button {
-    @apply relative w-full py-4 px-6 text-[#fff] text-lg font-medium
-           bg-[#19aea0] rounded-none transition-all duration-300
+    @apply relative w-full py-4 px-6 text-[#8d2f2f] text-lg font-medium
+           bg-[#F5DEB3] rounded-none transition-all duration-300
            hover:transform hover:scale-[1.02];
     clip-path: polygon(
       0% 10%,

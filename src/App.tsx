@@ -53,9 +53,9 @@ type TranslationsType = {
 
 const translations: TranslationsType = {
   en: {
-    name: "Immigrant Protection Resources",
-    name2: "KNOW YOUR PATIENTS' RIGHTS: PROVIDER RESOURCES",
-    bio: "Resources for Immigrants and Providers Working With Them",
+    name: "Resources for Immigrants and Providers Working With Them",
+    name2: "",
+    bio: "",
     languageButton: "Español",
     sections: {
       "1": "Immigrant Protection Resources",
@@ -163,8 +163,15 @@ const profile: Profile = {
           id: "1-3-1",
           title: "Santa Clara County Rapid Response Hotline:",
           type: "phone",
-          url: "tel:2036664472",
+          url: "tel:4082901144",
           description: "Tel: 408-290-1144",
+        },
+        {
+          id: "1-3-2",
+          title: "San Mateo County Rapid Response Hotline:",
+          type: "phone",
+          url: "tel:2036664472",
+          description: "Tel: 203-666-4472",
         },
       ],
     },
@@ -346,7 +353,7 @@ const LinkButton = ({
         onClick={handleClick}
         className={`torn-paper-button w-full text-left ${
           hasSubLinks || link.url ? "cursor-pointer" : ""
-        } ${isNested ? "nested-button" : ""} hover:bg-[#1a7a8c]/30`}
+        } ${isNested ? "nested-button" : ""} hover:bg-[#52B191]`}
         data-type={link.type}
       >
         <div className="flex items-center">
@@ -399,7 +406,7 @@ function App() {
   const t = translations[language];
 
   return (
-    <main className="min-h-screen w-full bg-[#acdde0] relative overflow-hidden">
+    <main className="min-h-screen w-full bg-[#8d2f2f] relative overflow-hidden">
       {/* Noise Overlay */}
       <div className="absolute inset-0 bg-noise opacity-50 mix-blend-overlay"></div>
 
@@ -407,17 +414,17 @@ function App() {
       <div className="relative z-10 container mx-auto px-4 py-8 flex flex-col items-center">
         {/* Profile Section */}
         <div className="text-center mb-8">
-          <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-[#F5DEB3] bg-[#acdde0]">
+          <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-[#F5DEB3] bg-[#8d2f2f]">
             <img
               src={profile.avatar}
               alt={t.name}
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="text-2xl font-bold text-[#19aea0] mb-2 uppercase">
+          <h1 className="text-2xl font-bold text-[#F5DEB3] mb-2 uppercase">
             {t.name}
           </h1>
-          <h1 className="text-2xl font-bold text-[#19aea0] mb-2 uppercase">
+          <h1 className="text-2xl font-bold text-[#F5DEB3] mb-2 uppercase">
             {t.name2}
           </h1>
           <p className="text-[#19aea0]/90 mb-4">{t.bio}</p>
