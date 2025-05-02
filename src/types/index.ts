@@ -4,6 +4,7 @@ export interface Link {
   id: string;
   title: string;
   url?: string;
+  urlEs?: string; // Spanish URL
   type?: LinkType;
   icon?: string;
   subLinks?: Link[];
@@ -13,14 +14,15 @@ export interface Link {
 
 export interface Profile {
   name: string;
+  name2: string;
   bio: string;
   avatar: string;
   backgroundImage: string;
   links: Link[];
   socialLinks: {
-    spotify?: string;
-    instagram?: string;
-    twitter?: string;
-    facebook?: string;
+    twitter: string;
+    facebook: string;
+    instagram: string;
+    spotify: string;
   };
 }

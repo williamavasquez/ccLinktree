@@ -42,6 +42,7 @@ type TranslationKey =
 type TranslationsType = {
   [key in "en" | "es"]: {
     name: string;
+    name2: string;
     bio: string;
     languageButton: string;
     sections: {
@@ -52,15 +53,16 @@ type TranslationsType = {
 
 const translations: TranslationsType = {
   en: {
-    name: "KNOW YOUR PATIENTS' RIGHTS: PROVIDER RESOURCES",
-    bio: "Resources for providers working with immigrants",
+    name: "Immigrant Protection Resources",
+    name2: "KNOW YOUR PATIENTS' RIGHTS: PROVIDER RESOURCES",
+    bio: "Resources for Immigrants and Providers Working With Them",
     languageButton: "Español",
     sections: {
-      "1": "Protecting our Patients",
+      "1": "Immigrant Protection Resources",
       "1-1": "Know Your Rights",
       "1-1-desc": "Learn about your rights and protections",
-      "1-2": "Create family preparedness plans",
-      "1-2-desc": "Step-by-step guide for family planning",
+      "1-2": "Immigrant Legal Resource Center",
+      "1-2-desc": "Step-by-step guide to create family preparedness plan",
       "1-3-1": "Santa Clara County Rapid Response Hotline:",
       "1-3-1-desc": "Tel: 408-290-1144",
       "2": "Legal Aid",
@@ -72,29 +74,32 @@ const translations: TranslationsType = {
       "2-3-desc": "Directory of immigration legal service providers",
       "3": "Practical Resources",
       "3-1": "Second Harvest Food Bank",
-      "3-1-desc": "Access food assistance and distribution locations",
-      "3-2": "Kids in Need of Defense - Psychosocial Support",
-      "3-2-desc": "Mental health and social support services for children",
-      "3-3": "MediCal Enrollment Information",
-      "3-3-desc": "Healthcare coverage regardless of immigration status",
-      "3-4": "La Raza Community Resource Center",
-      "3-4-desc": "Comprehensive community services and programs",
-      "3-5": "Bay Area Community Services",
-      "3-5-desc": "Support services for Bay Area residents",
-      "3-6": "Catholic Charities Food Distribution",
-      "3-6-desc": "Free food distribution services",
+      "3-1-desc": "Free food distribution services",
+      "3-2": "Catholic Charities Food Distribution",
+      "3-2-desc": "Free food distribution services",
+      "3-3": "Kids in Need of Defense - Support for Children",
+      "3-3-desc":
+        "Mental health services, social support, and resources for the legal immigration process for children",
+      "3-4": "Covered California - Medi-Cal",
+      "3-4-desc":
+        "Information regarding health insurance coverage for immigrants",
+      "3-5": "La Raza Community Resource Center",
+      "3-5-desc": "Comprehensive community services and programs",
+      "3-6": "Bay Area Community Services",
+      "3-6-desc": "Housing and recovery oriented mental health services",
     },
   },
   es: {
-    name: "CONOZCA LOS DERECHOS DE SUS PACIENTES: RECURSOS PARA PROVEEDORES",
-    bio: "Recursos para proveedores que trabajan con inmigrantes",
+    name: "RECURSOS DE PROTECCION AL INMIGRANTE",
+    name2: "CONOZCA LOS DERECHOS DE SUS PACIENTES: RECURSOS PARA PROVEEDORES",
+    bio: "Recursos para Inmigrantes y proveedores que trabajan con ellos",
     languageButton: "English",
     sections: {
-      "1": "Protegiendo a Nuestros Pacientes",
+      "1": "Recursos de Protección al Inmigrante",
       "1-1": "Conozca Sus Derechos",
       "1-1-desc": "Aprenda sobre sus derechos y protecciones",
-      "1-2": "Crear planes de preparación familiar",
-      "1-2-desc": "Guía paso a paso para la planificación familiar",
+      "1-2": "Centro de Recursos Legales para Inmigrantes",
+      "1-2-desc": "Guía paso a paso para crear un plan de preparación familiar",
       "1-3-1": "Línea Directa de Respuesta Rápida del Condado de Santa Clara:",
       "1-3-1-desc": "Tel: 408-290-1144",
       "2": "Ayuda Legal",
@@ -107,31 +112,34 @@ const translations: TranslationsType = {
         "Directorio de proveedores de servicios legales de inmigración",
       "3": "Recursos Prácticos",
       "3-1": "Banco de Alimentos Second Harvest",
-      "3-1-desc":
-        "Acceso a asistencia alimentaria y ubicaciones de distribución",
-      "3-2": "Kids in Need of Defense - Apoyo Psicosocial",
-      "3-2-desc": "Servicios de salud mental y apoyo social para niños",
-      "3-3": "Información de Inscripción a MediCal",
-      "3-3-desc": "Cobertura médica sin importar su estatus migratorio",
-      "3-4": "Centro de Recursos Comunitarios La Raza",
-      "3-4-desc": "Servicios y programas comunitarios integrales",
-      "3-5": "Servicios Comunitarios del Área de la Bahía",
-      "3-5-desc": "Servicios de apoyo para residentes del Área de la Bahía",
-      "3-6": "Distribución de Alimentos de Caridades Católicas",
-      "3-6-desc": "Servicios gratuitos de distribución de alimentos",
+      "3-1-desc": "Servicios gratuitos de distribución de alimentos",
+      "3-2": "Distribución de Alimentos de Caridades Católicas",
+      "3-2-desc": "Servicios gratuitos de distribución de alimentos",
+      "3-3": "Kids in Need of Defense - Apoyo para Niños",
+      "3-3-desc":
+        "Servicios de salud mental, apoyo social y recursos para el proceso legal de inmigración para niños",
+      "3-4": "Covered California - Medi-Cal",
+      "3-4-desc":
+        "Información sobre cobertura de seguro médico para inmigrantes",
+      "3-5": "Centro de Recursos Comunitarios La Raza",
+      "3-5-desc": "Servicios y programas comunitarios integrales",
+      "3-6": "Servicios Comunitarios del Área de la Bahía",
+      "3-6-desc":
+        "Servicios de vivienda y salud mental orientados a la recuperación",
     },
   },
 };
 
 const profile: Profile = {
-  name: "KNOW YOUR PATIENTS' RIGHTS: PROVIDER RESOURCES",
-  bio: "Resources for providers working with immigrants",
+  name: "Immigrant Protection Resources",
+  name2: "KNOW YOUR PATIENTS' RIGHTS: PROVIDER RESOURCES",
+  bio: "Resources for Immigrants and Providers Working With Them",
   avatar: "/supportButterfly.png",
   backgroundImage: "bgimage.jpg",
   links: [
     {
       id: "1",
-      title: "Protecting our Patients",
+      title: "Immigrant Protection Resources",
       type: "section",
       subLinks: [
         {
@@ -139,21 +147,24 @@ const profile: Profile = {
           title: "Know Your Rights",
           type: "url",
           url: "https://www.ilrc.org/red-cards-tarjetas-rojas",
+          urlEs: "https://www.ilrc.org/red-cards-tarjetas-rojas#espa%C3%B1ol",
           description: "Learn about your rights and protections",
         },
         {
           id: "1-2",
-          title: "Create family preparedness plans",
+          title: "Immigrant Legal Resource Center",
           type: "url",
           url: "https://www.ilrc.org/resources/step-step-family-preparedness-plan",
-          description: "Step-by-step guide for family planning",
+          urlEs:
+            "https://www.ilrc.org/resources/step-step-family-preparedness-plan#espa%C3%B1ol",
+          description: "Step-by-step guide to create family preparedness plan",
         },
         {
           id: "1-3-1",
-          title: "San Mateo County Rapid Response Hotline",
+          title: "Santa Clara County Rapid Response Hotline:",
           type: "phone",
           url: "tel:2036664472",
-          description: "24/7 Emergency Hotline",
+          description: "Tel: 408-290-1144",
         },
       ],
     },
@@ -167,6 +178,7 @@ const profile: Profile = {
           title: "Immigration Institute of the Bay Area",
           type: "url",
           url: "https://iibayarea.org/services/consultations/",
+          urlEs: "https://iibayarea.org/es/servicios/consultas/",
           description: "Free immigration consultations and legal services",
         },
         {
@@ -195,42 +207,46 @@ const profile: Profile = {
           title: "Second Harvest Food Bank",
           type: "url",
           url: "https://www.shfb.org/get-food/",
-          description: "Access food assistance and distribution locations",
+          urlEs: "https://www.shfb.org/es/get-food/",
+          description: "Free food distribution services",
         },
         {
           id: "3-2",
-          title: "Kids in Need of Defense - Psychosocial Support",
+          title: "Catholic Charities Food Distribution",
           type: "url",
-          url: "https://supportkind.org/what-we-do/social-services/",
-          description: "Mental health and social support services for children",
+          url: "https://www.ccscc.org/free-food-distribution?locale=en",
+          urlEs: "https://www.ccscc.org/free-food-distribution?locale=es",
+          description: "Free food distribution services",
         },
         {
           id: "3-3",
-          title: "MediCal Enrollment Information",
+          title: "Kids in Need of Defense - Support for Children",
           type: "url",
-          url: "https://www.coveredca.com/learning-center/information-for-immigrants/",
-          description: "Healthcare coverage regardless of immigration status",
+          url: "https://supportkind.org/what-we-do/social-services/",
+          description:
+            "Mental health services, social support, and resources for the legal immigration process for children",
         },
         {
           id: "3-4",
+          title: "Covered California - Medi-Cal",
+          type: "url",
+          url: "https://www.coveredca.com/learning-center/information-for-immigrants/",
+          description:
+            "Information regarding health insurance coverage for immigrants",
+        },
+        {
+          id: "3-5",
           title: "La Raza Community Resource Center",
           type: "url",
           url: "https://www.larazacrc.org/programs-services",
           description: "Comprehensive community services and programs",
         },
         {
-          id: "3-5",
+          id: "3-6",
           title: "Bay Area Community Services",
           type: "url",
           url: "https://bayareacs.org/what-we-do/#",
-          description: "Support services for Bay Area residents",
-        },
-        {
-          id: "3-6",
-          title: "Catholic Charities Food Distribution",
-          type: "url",
-          url: "https://www.ccscc.org/free-food-distribution?locale=en",
-          description: "Free food distribution services",
+          description: "Housing and recovery oriented mental health services",
         },
       ],
     },
@@ -288,17 +304,20 @@ const LinkButton = ({
   const handleClick = () => {
     if (hasSubLinks && onToggle) {
       onToggle(link.id);
-    } else if (link.url) {
+    } else if (link.url || link.urlEs) {
+      const url = (language === "es" ? link.urlEs : link.url) || link.url;
+      if (!url) return;
+
       switch (link.type) {
         case "phone":
-          window.location.href = link.url;
+          window.location.href = url;
           break;
         case "email":
-          window.location.href = link.url;
+          window.location.href = url;
           break;
         case "url":
         default:
-          window.open(link.url, "_blank");
+          window.open(url, "_blank");
           break;
       }
     }
@@ -327,7 +346,7 @@ const LinkButton = ({
         onClick={handleClick}
         className={`torn-paper-button w-full text-left ${
           hasSubLinks || link.url ? "cursor-pointer" : ""
-        } ${isNested ? "nested-button" : ""}`}
+        } ${isNested ? "nested-button" : ""} hover:bg-[#1a7a8c]/30`}
         data-type={link.type}
       >
         <div className="flex items-center">
@@ -395,14 +414,19 @@ function App() {
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="text-2xl font-bold text-[#19aea0] mb-2">{t.name}</h1>
+          <h1 className="text-2xl font-bold text-[#19aea0] mb-2 uppercase">
+            {t.name}
+          </h1>
+          <h1 className="text-2xl font-bold text-[#19aea0] mb-2 uppercase">
+            {t.name2}
+          </h1>
           <p className="text-[#19aea0]/90 mb-4">{t.bio}</p>
 
           {/* Language Toggle Button */}
           <button
             onClick={toggleLanguage}
             className="px-4 py-1.5 bg-[#19aea0] text-white rounded-full font-medium 
-                     hover:bg-[#148f83] transition-colors duration-200 mb-6 
+                     hover:bg-[#1a7a8c] transition-colors duration-200 mb-6 
                      shadow-md border border-[#19aea0]/30"
           >
             {t.languageButton}
